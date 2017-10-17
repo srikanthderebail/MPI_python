@@ -14,6 +14,7 @@ def main():
     else:
         array = None
     array = comm.bcast(array,root=1)
+    print('Processor ',rank,' received ',array)
 
     comm.Barrier()
 
